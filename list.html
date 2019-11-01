@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./list.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="box">
+        <li class="list"></li>
+    </ul>
+</body>
+    <script>
+        let box = document.querySelector('.box');
+        let arr = [
+            {text:'国内新闻',value:1},
+            {text:'国际新闻',value:2},
+            {text:'国内热点',value:3},
+            {text:'国际热点',value:4},
+            {text:'时政热点',value:5},
+            {text:'今日头条',value:6},
+            {text:'晚间新闻',value:7},
+            {text:'早间新闻',value:8},
+        ];
+        let str = ''
+        arr.forEach((v , i)=>{
+            str +=`
+            <li class="list">${v.value}-${v.text}</li> 
+            `;
+            box.innerHTML = str;
+        })
+    </script>
+</html>
